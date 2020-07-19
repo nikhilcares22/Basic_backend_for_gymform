@@ -1,0 +1,1 @@
+console.log("Thiis is inside static folder");

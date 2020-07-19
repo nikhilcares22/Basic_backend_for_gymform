@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    style
+        include ../static/style.css
+</head>
+
+<body>
+    <nav class="navbar">
+         <ul> <a href="">Home</a> </ul>
+         <ul><a href="">About</a></ul>
+         <ul><a href="">Contact us</a></ul>
+</nav>
+    <h1>Hurrry up get this gym membership!!!</h1>
+    <div id="cont">
+        <!-- <p>
+            | #{content}
+        </p> -->
+
+        <form action="/" method="POST" id="contact">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <input type="text" name="age" id="age" placeholder="Enter your age ">
+        <input type="text" name="gender" id="gender" placeholder="Enter your gender ">
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="Your Address"></textarea>
+        <textarea name="more" id="more" cols="30" rows="10" placeholder="More about you"></textarea>
+        <button class="btn">Enter </button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
