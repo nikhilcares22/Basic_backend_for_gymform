@@ -4,12 +4,12 @@ const app = express();
 const fs = require('fs');
 const PORT = 80;
 //EXPRESS SPECIFIC STUFF
-app.use('/static', express.static('static'));//for serving static folder
+app.use('/static', express.static('static')); //for serving static folder
 app.use(express.urlencoded());
 
 //PUG SPECIFIC STUFF 
-app.set('view engine', 'pug');//set the template engine as pug
-app.set('views', path.join(__dirname, 'views'));//set the views directory
+app.set('view engine', 'pug'); //set the template engine as pug
+app.set('views', path.join(__dirname, 'views')); //set the views directory
 
 //ENDPOINTS
 app.get('/', (req, res) => {
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 
     res.status(200).render('index.pug', params);
 });
+console.log("hello")
 
 app.post('/', (req, res) => {
     console.log(req.body);
@@ -31,7 +32,7 @@ app.post('/', (req, res) => {
     more = req.body.more;
     let outputtowrite = `The name of the client is ${name}, ${age} years old, lives in ${address} and more about him/her: ${more}\n`;
 
-    fs.appendFileSync('output.txt',outputtowrite);
+    fs.appendFileSync('output.txt', outputtowrite);
     res.status(200).render('index.pug', params);
 });
 
