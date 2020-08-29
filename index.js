@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const fs = require('fs');
 const PORT = 80;
+const nikhhil = true
 //EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')); //for serving static folder
 app.use(express.urlencoded());
