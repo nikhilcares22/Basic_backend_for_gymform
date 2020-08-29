@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 
     res.status(200).render('index.pug', params);
 });
-console.log("hello")
+
+
 
 app.post('/', (req, res) => {
     console.log(req.body);
